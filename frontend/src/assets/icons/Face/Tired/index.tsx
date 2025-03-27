@@ -1,0 +1,1 @@
+export { Tired } from "./Tired";

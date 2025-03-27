@@ -1,0 +1,65 @@
+[
+  {
+    "category_id": 2,
+    "rec_name": "Take a breather, do what brings you joy",
+    "rec_duration": 15
+  },
+  {
+    "category_id": 2,
+    "rec_name": "Recharge with a quick power nap!",
+    "rec_duration": 30
+  },
+  {
+    "category_id": 2,
+    "rec_name": "Enjoy some soothing music",
+    "rec_duration": 15
+  },
+
+  {
+    "category_id": 3,
+    "rec_name": "Embark on a journey of self-meditation",
+    "rec_duration": 15
+  },
+  {
+    "category_id": 3,
+    "rec_name": "Connect with your loved ones",
+    "rec_duration": 15
+  },
+  {
+    "category_id": 3,
+    "rec_name": "Unwind with a yoga session!",
+    "rec_duration": 15
+  },
+
+  {
+    "category_id": 4,
+    "rec_name": "Reflect on 3 things you're grateful for!",
+    "rec_duration": 10
+  },
+  {
+    "category_id": 4,
+    "rec_name": "Embark on a podcast journey",
+    "rec_duration": 15
+  },
+  {
+    "category_id": 4,
+    "rec_name": "Move around, your body is your temple!",
+    "rec_duration": 15
+  },
+
+  {
+    "category_id": 5,
+    "rec_name": "Reach out and call your closest friends",
+    "rec_duration": 10
+  },
+  {
+    "category_id": 5,
+    "rec_name": "Relax with some deep breathing exercises",
+    "rec_duration": 15
+  },
+  {
+    "category_id": 5,
+    "rec_name": "Treat yourself to a well deserved reward!",
+    "rec_duration": 15
+  }
+]

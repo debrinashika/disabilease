@@ -1,60 +1,94 @@
-# disabilease
+### **README.md**  
 
-## Full-Stack Setup with React, Vite, and Express
+```md
+# Disabilease Aplikasi Pembelajaran untuk Caregiver Anak Disabilitas  
 
-This guide walks you through setting up a full-stack web application using React, Vite, and Express.
+Aplikasi ini adalah platform pembelajaran interaktif yang membantu orang tua anak disabilitas dalam mendapatkan informasi, sumber daya, dan dukungan yang dibutuhkan.
 
-## Prerequisites
-Ensure you have the following installed on your machine:
-- [Node.js](https://nodejs.org/) (LTS version recommended)
-- npm (comes with Node.js) or yarn
 
-## Project Structure
-```
-my-fullstack-app/
-  ├── frontend/   # React + Vite frontend
-  ├── backend/    # Express backend
-```
+## 🛠️ Teknologi yang Digunakan  
+### **Frontend**  
+- Next.js (React)  
+- TypeScript  
+- Tailwind CSS  
+- React Hook Form + Zod (Validasi Form)  
+- Firebase Storage (Media Upload)  
 
-## Run the Project
-To start the project, open two terminals and run the following commands:
+### **Backend**  
+- Next.js API Routes  
+- Prisma ORM  
+- PostgreSQL  
+- Authentication dengan JWT  
+- Firebase Storage untuk penyimpanan file  
 
-### Terminal 1 (Backend)
-```sh
-cd backend
-node server.js
-```
+---
 
-### Terminal 2 (Frontend)
-```sh
-cd frontend
-npm run dev
-```
+## 🏗️ Cara Menjalankan Proyek  
 
-## 4. Build dan Jalankan dengan Docker Compose
-Jalankan perintah berikut untuk membangun dan menjalankan semua layanan:
+### **1️⃣ Persyaratan**  
+Pastikan Anda telah menginstal:  
+- **Node.js** 
+- **PostgreSQL**  
+---
 
-```sh
-docker-compose up --build
-```
+## 🚀 Menjalankan **Frontend**  
 
-## 5. Akses Aplikasi
-- **Frontend**: `http://localhost:3000`
-- **Backend API**: `http://localhost:3000/api`
-- **Cek Database**:
+1. **Masuk ke folder frontend**  
+   ```sh
+   cd frontend
+   ```
+
+2. **Install dependencies**  
+   ```sh
+   npm install
+   ```
+
+3. **Buat file `.env`**  
+  copy .env.example ke .env
+ 
+4. **Jalankan frontend**  
+   ```sh
+   npm run dev
+   ```
+   Frontend akan berjalan di `http://localhost:5173`.
+
+---
+
+## 🛠️ Menjalankan **Backend**  
+
+1. **Masuk ke folder backend**  
+   ```sh
+   cd backend
+   ```
+
+2. **Install dependencies**  
+   ```sh
+   npm install
+   ```
+
+3. **Buat file `.env`**  
+  copy .env.example ke .env (user sama password sesuain sama milik pribadi)
+
+4. **Jalankan migrasi Prisma**  
+   ```sh
+  npx prisma migrate dev --name init
+
+  Jika ingin mengecek database, bisa gunakan:
+  npx prisma studio
+
+   ```
+
+5. **Jalankan backend**  
+   ```sh
+   npm run dev
+   ```
+   Backend akan berjalan di `http://localhost:4000`.
+
+6. **Buat kalau mau seeding**
   ```sh
-  docker exec -it disabilease-db-1 psql -U dbuser -d maindb
+   npm run seed
+   ```
 
-  ```
 
-## 6. Menjalankan Ulang atau Menghentikan Layanan
-- **Stop layanan**:
-  ```sh
-  docker-compose down
-  ```
-- **Restart layanan**:
-  ```sh
-  docker-compose up -d
-  ```
-
+---
 

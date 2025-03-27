@@ -1,0 +1,90 @@
+[
+  {
+    "category_id": 2,
+    "question": "How often have you felt a lack of interest or pleasure in doing things?"
+  },
+  {
+    "category_id": 2,
+    "question": "How often have you been feeling a bit blue, down, or just plain hopeless?"
+  },
+  {
+    "category_id": 2,
+    "question": "Have you had any trouble falling or staying asleep, or sleeping too much?"
+  },
+  {
+    "category_id": 2,
+    "question": "Have you been feeling tired or having little energy?"
+  },
+  {
+    "category_id": 2,
+    "question": "How's your appetite been lately?"
+  },
+
+  {
+    "category_id": 3,
+    "question": "How's your chill level been lately?"
+  },
+  {
+    "category_id": 3,
+    "question": "How's your worry meter been lately?"
+  },
+  {
+    "category_id": 3,
+    "question": "How often have you felt that you worry too much about different things?"
+  },
+  {
+    "category_id": 3,
+    "question": "How's your ability to relax been lately?"
+  },
+  {
+    "category_id": 3,
+    "question": "Have you been feeling so restless that it is hard to sit still?"
+  },
+
+  {
+    "category_id": 4,
+    "question": "I feel like I could sleep ten hours a night and it still wouldn't feel like enough"
+  },
+  {
+    "category_id": 4,
+    "question": "How do you feel about your compensation for the work you do?"
+  },
+  {
+    "category_id": 4,
+    "question": "How's your creative spark been lately?"
+  },
+  {
+    "category_id": 4,
+    "question": "What about your day to day workload?"
+  },
+  {
+    "category_id": 4,
+    "question": "Would you say you have a great work/life balance?"
+  },
+
+  {
+    "category_id": 5,
+    "question": "How often have you been caught off guard lately?"
+  },
+  {
+    "category_id": 5,
+    "question": "Ever felt like life's just spinning out of control?"
+  },
+  {
+    "category_id": 5,
+    "question": "How often have you felt like the universe is on your side lately?"
+  },
+  {
+    "category_id": 5,
+    "question": "How often have you felt like you're the master of keeping cool in frustrating situations?"
+  },
+  {
+    "category_id": 5,
+    "question": "How often have you felt like you're running the show lately?"
+  },
+
+  {
+    "category_id": 1,
+    "question": "How are you feeling today?"
+  }
+]

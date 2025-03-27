@@ -1,68 +1,268 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+/* Fonts */
+@layer base {
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppinsthin.ttf") format("truetype");
+    font-weight: 100;
+  }
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppinsthinitalic.ttf") format("truetype");
+    font-weight: 100;
+    font-style: italic;
+  }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppinsextralight.ttf") format("truetype");
+    font-weight: 200;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("/fonts/poppinsextralightitalic.ttf") format("truetype");
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinslight.ttf") format("truetype");
+    font-weight: 300;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinslightitalic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsregular.ttf") format("truetype");
+    font-weight: 400;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsitalic.ttf") format("truetype");
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsmedium.ttf") format("truetype");
+    font-weight: 500;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsmediumitalic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinssemibold.ttf") format("truetype");
+    font-weight: 600;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinssemibolditalic.ttf") format("truetype");
+    font-weight: 600;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsbold.ttf") format("truetype");
+    font-weight: 700;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsbolditalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsextrabold.ttf") format("truetype");
+    font-weight: 800;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsextrabolditalic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsblack.ttf") format("truetype");
+    font-weight: 900;
+  }
+
+  @font-face {
+    font-family: "Poppins";
+    src: url("fonts/poppinsblackitalic.ttf") format("truetype");
+    font-weight: 900;
+    font-style: italic;
+  }
 }
 
 body {
+  @apply font-poppins
+}
+
+main {
+  width: 100%;
+}
+
+@media (min-width: 430px) {
+  main {
+    width: 430px;
+  }
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.overflow-y-auto::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.overflow-y-auto {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Chrome, Safari, Edge, Opera */
+/** Remove arrow from input number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/** Hide scrollbar */
+::-webkit-scrollbar {
+  display: none;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+/* Firefox */
+/** Remove arrow from input number */
+input[type="number"] {
+  -moz-appearance: textfield;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+/** Hide scrollbar */
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/** Input range */
+input[type="range"] {
+  --range-progress: 0;
+  -webkit-appearance: none;
+  position: relative;
+  background: #FFF9E7;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+/* Input range - firefox */
+input[type="range"]::-moz-range-track {
+  position: relative;
+  background: #FFF9E7;
+  width: 100%;
+  height: 4px;
+  border-radius: 5px;
+}
+
+/* played progress length - Chrome & safari*/
+input[type="range"]::before {
+  content: '';
+  height: 4px;
+  background: #EFAA56;
+  width: var(--range-progress);
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+/* played progress length - firefox */
+input[type="range"]::-moz-range-progress {
+  background: #EFAA56;
+  border-radius: 5px;
+  height: 4px;
+}
+
+/* slider thumb - chrome and safari */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  border: none;
+  background-color: #EFAA56;
+  position: relative;
+}
+
+/* dragging thumb - chrome and safari */
+input[type="range"]:active::-webkit-slider-thumb {
+  transform: scale(1.2);
+}
+
+/* slider thumb - firefox */
+input[type="range"]::-moz-range-thumb {
+  height: 0px;
+  width: 0px;
+  border-radius: 50%;
+  background: #EFAA56;
+  border: transparent;
+  position: relative;
+}
+/* dragging thumb - firefox */
+input[type="range"]:active::-moz-range-thumb {
+  transform: scale(1.2);
+}
+
+input[type=time]::-webkit-datetime-edit-ampm-field {
+  display: none;
+}
+
+input[type=time]::-webkit-clear-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance:none;
+  appearance: none;
+  margin: -10px; 
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select {
+  background-image: url("/icons/chevron-down.svg");
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 8px) center;
 }

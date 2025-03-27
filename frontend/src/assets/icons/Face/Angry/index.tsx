@@ -1,0 +1,1 @@
+export { Angry } from "./Angry";

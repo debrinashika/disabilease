@@ -1,0 +1,472 @@
+[
+  {
+    "question_id": 1,
+    "answer": "Hardly ever",
+    "points": 0
+  },
+  {
+    "question_id": 1,
+    "answer": "Every now and then, for a few days",
+    "points": 1
+  },
+  {
+    "question_id": 1,
+    "answer": "Pretty often, more than half the time",
+    "points": 2
+  },
+  {
+    "question_id": 1,
+    "answer": "Pretty much all the time",
+    "points": 3
+  },
+
+  {
+    "question_id": 2,
+    "answer": "Not really, I'm mostly feeling okay",
+    "points": 0
+  },
+  {
+    "question_id": 2,
+    "answer": "Occasionally, I get into a funk",
+    "points": 1
+  },
+  {
+    "question_id": 2,
+    "answer": "It varies, some days are better than others",
+    "points": 2
+  },
+  {
+    "question_id": 2,
+    "answer": "It feels like I'm always battling these feelings",
+    "points": 3
+  },
+
+  {
+    "question_id": 3,
+    "answer": "Sleeping like a baby, no issues at all",
+    "points": 0
+  },
+  {
+    "question_id": 3,
+    "answer": "Every now and then, it's tough to fall or stay asleep",
+    "points": 1
+  },
+  {
+    "question_id": 3,
+    "answer": "Some nights are better than others",
+    "points": 2
+  },
+  {
+    "question_id": 3,
+    "answer": "Seems like I'm always struggling to get a good night's sleep",
+    "points": 3
+  },
+
+  {
+    "question_id": 4,
+    "answer": "Not really, I'm mostly feeling fine",
+    "points": 0
+  },
+  {
+    "question_id": 4,
+    "answer": "Occasionally, I find myself feeling a bit drained",
+    "points": 1
+  },
+  {
+    "question_id": 4,
+    "answer": "Some days are better than others",
+    "points": 2
+  },
+  {
+    "question_id": 4,
+    "answer": "Yep, sounds like me",
+    "points": 3
+  },
+
+  {
+    "question_id": 5,
+    "answer": "I eat regularly, about 2-3 times a day",
+    "points": 0
+  },
+  {
+    "question_id": 5,
+    "answer": "Occasionally I'm not in the mood to eat",
+    "points": 1
+  },
+  {
+    "question_id": 5,
+    "answer": "More than half of the time, I either can't stop eating or have no appetite",
+    "points": 2
+  },
+  {
+    "question_id": 5,
+    "answer": "My eating habits are all over the place",
+    "points": 3
+  },
+
+  {
+    "question_id": 6,
+    "answer": "I'm the picture of serenity, nothing rattles me!",
+    "points": 0
+  },
+  {
+    "question_id": 6,
+    "answer": "Occasionally, I get a bit jittery, but it's nothing I can't handle",
+    "points": 1
+  },
+  {
+    "question_id": 6,
+    "answer": "Some days, I'm feeling like a bundle of nerves, but I've got my coping strategies",
+    "points": 2
+  },
+  {
+    "question_id": 6,
+    "answer": "It's like a suspense movie marathon in my mind, always on the edge of my seat",
+    "points": 3
+  },
+
+  {
+    "question_id": 7,
+    "answer": "Worry? What's that? I'm as carefree as a bird in flight!",
+    "points": 0
+  },
+  {
+    "question_id": 7,
+    "answer": "Occasionally, I catch myself overthinking, but I shake it off pretty quickly",
+    "points": 1
+  },
+  {
+    "question_id": 7,
+    "answer": "Most days, I'm drowning in a sea of worries",
+    "points": 2
+  },
+  {
+    "question_id": 7,
+    "answer": "It's like my brain's on a worry marathon, always racing a mile a minute",
+    "points": 3
+  },
+
+  {
+    "question_id": 8,
+    "answer": "Worrying? Nah, I'm too busy living my best life!",
+    "points": 0
+  },
+  {
+    "question_id": 8,
+    "answer": "Every now and then, I catch myself sweating the small stuff",
+    "points": 1
+  },
+  {
+    "question_id": 8,
+    "answer": "Some days, It's like I'm starring in my own worry saga, with new plot twists every day",
+    "points": 2
+  },
+  {
+    "question_id": 8,
+    "answer": "I'm always juggling a dozen worries, like a worry circus performer",
+    "points": 3
+  },
+
+  {
+    "question_id": 9,
+    "answer": "I basically wrote the book on relaxing!",
+    "points": 0
+  },
+  {
+    "question_id": 9,
+    "answer": "Every now and then, I struggle to unwind, but I eventually find my zen",
+    "points": 1
+  },
+  {
+    "question_id": 9,
+    "answer": "It's like my relaxation switch is glitchy, flipping on and off",
+    "points": 2
+  },
+  {
+    "question_id": 9,
+    "answer": "I'm pretty tightly wounded",
+    "points": 3
+  },
+
+  {
+    "question_id": 10,
+    "answer": "Still as a statue, nothing moves me!",
+    "points": 0
+  },
+  {
+    "question_id": 10,
+    "answer": "Every now and then, I feel a bit antsy, but I can handle it",
+    "points": 1
+  },
+  {
+    "question_id": 10,
+    "answer": "It's like I'm always fidgeting",
+    "points": 2
+  },
+  {
+    "question_id": 10,
+    "answer": "I feel so anxious that I have to constantly be in motion",
+    "points": 3
+  },
+
+  {
+    "question_id": 11,
+    "answer": "I'm a champion sleeper, never needing more than the recommended amount",
+    "points": 0
+  },
+  {
+    "question_id": 11,
+    "answer": "I feel pretty well-rested most days",
+    "points": 1
+  },
+  {
+    "question_id": 11,
+    "answer": "I could use a bit more shut-eye",
+    "points": 2
+  },
+  {
+    "question_id": 11,
+    "answer": "Even with ten hours, I could use a nap",
+    "points": 3
+  },
+
+  {
+    "question_id": 12,
+    "answer": "I'm rolling in the dough and loving every minute",
+    "points": 0
+  },
+  {
+    "question_id": 12,
+    "answer": "I feel fairly compensated, but could use a little extra",
+    "points": 1
+  },
+  {
+    "question_id": 12,
+    "answer": "Honestly the stress outweighs the paycheck most days",
+    "points": 2
+  },
+  {
+    "question_id": 12,
+    "answer": "I'm feeling the strain and could use a raise, pronto",
+    "points": 3
+  },
+
+  {
+    "question_id": 13,
+    "answer": "I'm bursting with ideas, like a fireworks show",
+    "points": 0
+  },
+  {
+    "question_id": 13,
+    "answer": "I've had to dig a bit deeper for inspiration",
+    "points": 1
+  },
+  {
+    "question_id": 13,
+    "answer": "I've noticed a decline in my creative mojo",
+    "points": 2
+  },
+  {
+    "question_id": 13,
+    "answer": "My creativity is MIA, like trying to find a needle in a haystack",
+    "points": 3
+  },
+
+  {
+    "question_id": 14,
+    "answer": "I'm breezing through tasks like a pro",
+    "points": 0
+  },
+  {
+    "question_id": 14,
+    "answer": "I'm keeping up alright, just need a breather",
+    "points": 1
+  },
+  {
+    "question_id": 14,
+    "answer": "I've got a hefty load, but I can manage",
+    "points": 2
+  },
+  {
+    "question_id": 14,
+    "answer": "My to-do list is longer than a CVS receipt",
+    "points": 3
+  },
+
+  {
+    "question_id": 15,
+    "answer": "I've nailed the balance, like a circus performer on a tightrope",
+    "points": 0
+  },
+  {
+    "question_id": 15,
+    "answer": "I've found a decent equilibrium, but it's a bit wobbly",
+    "points": 1
+  },
+  {
+    "question_id": 15,
+    "answer": "Work's been tipping the scales lately, but I'm hanging in there",
+    "points": 2
+  },
+  {
+    "question_id": 15,
+    "answer": "It's all work and no play, like a hamster on a wheel",
+    "points": 3
+  },
+
+  {
+    "question_id": 16,
+    "answer": "Never, I'm like a ninja, always prepared for anything",
+    "points": 0
+  },
+  {
+    "question_id": 16,
+    "answer": "Surprises don't rattle me too often",
+    "points": 1
+  },
+  {
+    "question_id": 16,
+    "answer": "I've had a few unexpected moments that got to me",
+    "points": 2
+  },
+  {
+    "question_id": 16,
+    "answer": "It seems like surprises keep popping up out of nowhere",
+    "points": 3
+  },
+  {
+    "question_id": 16,
+    "answer": "I'm constantly feeling blindsided by unexpected events",
+    "points": 4
+  },
+
+  {
+    "question_id": 17,
+    "answer": "Never, I'm the master of my destiny, steering my life with ease",
+    "points": 0
+  },
+  {
+    "question_id": 17,
+    "answer": "I've had a few bumps in the road, but I'm still in the driver's seat",
+    "points": 1
+  },
+  {
+    "question_id": 17,
+    "answer": "There are moments when I feel like things are slipping through my fingers",
+    "points": 2
+  },
+  {
+    "question_id": 17,
+    "answer": "Fairly often, it's like I'm on a rollercoaster ride with no brakes",
+    "points": 3
+  },
+  {
+    "question_id": 17,
+    "answer": "I'm constantly feeling like life's playing a game of Twister with my plans",
+    "points": 4
+  },
+
+  {
+    "question_id": 18,
+    "answer": "Very often, it's like I'm riding a wave of good fortune, with luck on my side at every turn",
+    "points": 0
+  },
+  {
+    "question_id": 18,
+    "answer": "I'm feeling pretty lucky, like I've got a four-leaf clover in my pocket",
+    "points": 1
+  },
+  {
+    "question_id": 18,
+    "answer": "Sometimes, things seem to be lining up nicely, like the stars are aligning in my favor",
+    "points": 2
+  },
+  {
+    "question_id": 18,
+    "answer": "I've had a few glimmers of hope, but they're few and far between",
+    "points": 3
+  },
+  {
+    "question_id": 18,
+    "answer": "Never, it's like I'm swimming against the current, struggling to catch a break",
+    "points": 4
+  },
+
+  {
+    "question_id": 19,
+    "answer": "I'm mostly unfazed by whatever life throws my way",
+    "points": 0
+  },
+  {
+    "question_id": 19,
+    "answer": "I've got a handle on my frustrations, deflecting annoyances like a pro",
+    "points": 1
+  },
+  {
+    "question_id": 19,
+    "answer": "Sometimes, I'm feeling pretty zen, like I can brush off irritations with ease",
+    "points": 2
+  },
+  {
+    "question_id": 19,
+    "answer": "I've had a few moments where I lost my cool, but I managed to reign it in",
+    "points": 3
+  },
+  {
+    "question_id": 19,
+    "answer": "I'm like a powder keg, ready to explode at the slightest annoyance",
+    "points": 4
+  },
+
+  {
+    "question_id": 20,
+    "answer": "I'm the king or queen of the castle, confidently calling the shots",
+    "points": 0
+  },
+  {
+    "question_id": 20,
+    "answer": "I've got things under control, all things considered",
+    "points": 1
+  },
+  {
+    "question_id": 20,
+    "answer": "Some days, I'm feeling pretty confident, other days, not so much",
+    "points": 2
+  },
+  {
+    "question_id": 20,
+    "answer": "Honestly, It's been pretty hard lately, but I still manage",
+    "points": 3
+  },
+  {
+    "question_id": 20,
+    "answer": "Never, it's like I'm playing a game of catch-up, constantly one step behind",
+    "points": 4
+  },
+
+  {
+    "question_id": 21,
+    "answer": "I'm feeling a little down and gloomy",
+    "points": 0
+  },
+  {
+    "question_id": 21,
+    "answer": "I've been pretty anxious lately",
+    "points": 1
+  },
+  {
+    "question_id": 21,
+    "answer": "I'm feeling a bit drained and exhausted",
+    "points": 2
+  },
+  {
+    "question_id": 21,
+    "answer": "Pretty overwhelmed with stress",
+    "points": 3
+  },
+  {
+    "question_id": 21,
+    "answer": "All good, loving life",
+    "points": 4
+  }
+]

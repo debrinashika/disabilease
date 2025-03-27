@@ -12,3 +12,115 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+enum Gender {
+  M
+  F
+}
+
+model User {
+  user_id  Int     @id @default(autoincrement())
+  username String  @unique @db.VarChar(64)
+  email    String  @unique @db.VarChar(255)
+  password String  @db.VarChar(255)
+  age      Int?
+  gender   Gender?
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  assessment_results AssessmentResult[]
+  task_categories    TaskCategory[]
+  tasks              Task[]
+}
+
+model Category {
+  category_id   Int    @id @default(autoincrement())
+  category_name String @db.VarChar(64)
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  assessment_results AssessmentResult[]
+  questions          Question[]
+  recommendations    Recommendation[]
+}
+
+model AssessmentResult {
+  user_id      Int
+  category_id  Int
+  total_points Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  user     User     @relation(fields: [user_id], references: [user_id])
+  category Category @relation(fields: [category_id], references: [category_id])
+
+  @@id([user_id, category_id])
+}
+
+model Question {
+  question_id Int    @id @default(autoincrement())
+  category_id Int
+  question    String @db.VarChar(255)
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  category Category @relation(fields: [category_id], references: [category_id])
+  answers  Answer[]
+}
+
+model Answer {
+  question_id Int
+  answer_id   Int    @id @default(autoincrement())
+  answer      String @db.VarChar(255)
+  points      Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  question Question @relation(fields: [question_id], references: [question_id])
+}
+
+model TaskCategory {
+  task_category_id   Int    @id @default(autoincrement())
+  user_id            Int
+  task_category_name String @db.VarChar(64)
+  priority           Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  user  User   @relation(fields: [user_id], references: [user_id])
+  tasks Task[]
+}
+
+model Task {
+  task_id          Int      @id @default(autoincrement())
+  user_id          Int
+  task_name        String   @db.VarChar(255)
+  deadline         DateTime
+  task_duration    Int
+  status           Int // 0: not finished, 1: finished
+  task_category_id Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  user          User         @relation(fields: [user_id], references: [user_id])
+  task_category TaskCategory @relation(fields: [task_category_id], references: [task_category_id])
+}
+
+model Recommendation {
+  rec_id       Int    @id @default(autoincrement())
+  category_id  Int
+  rec_name     String @db.VarChar(255)
+  rec_duration Int
+
+  created_at DateTime @default(now())
+  updated_at DateTime @default(now()) @updatedAt
+
+  category Category @relation(fields: [category_id], references: [category_id])
+}
