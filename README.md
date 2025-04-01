@@ -1,6 +1,5 @@
 ### **README.md**  
 
-```md
 # Disabilease Aplikasi Pembelajaran untuk Caregiver Anak Disabilitas  
 
 Aplikasi ini adalah platform pembelajaran interaktif yang membantu orang tua anak disabilitas dalam mendapatkan informasi, sumber daya, dan dukungan yang dibutuhkan.
@@ -69,13 +68,11 @@ Pastikan Anda telah menginstal:
 3. **Buat file `.env`**  
   copy .env.example ke .env (user sama password sesuain sama milik pribadi)
 
-4. **Jalankan migrasi Prisma**  
-   ```sh
-  npx prisma migrate dev --name init
-
-  Jika ingin mengecek database, bisa gunakan:
-  npx prisma studio
-
+4. **Jalankan migrasi Prisma**
+    ```sh
+     npx prisma migrate dev --name init
+     Jika ingin mengecek database, bisa gunakan:
+     npx prisma studio
    ```
 
 5. **Jalankan backend**  
