@@ -50,13 +50,11 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
     password: string,
     confirm_password: string
   ) => {
-    const res = await apiBase().auth().register(username, email, password, confirm_password);
+    navigate("/login");
 
-    if (res.status === "success") {
-      navigate("/login");
-    }
+    return apiBase().auth().register(username, email, password, confirm_password);
 
-    return res;
+
   };
 
   const logout = async () => {
@@ -73,20 +71,24 @@ export const AuthProvider: React.FC<AuthProviderProps> = ({ children }) => {
 
   useEffect(() => {
     setIsLoading(true);
-
+  
     const delay = setTimeout(async () => {
       try {
-        await self();
+        const res = await self();
+        if (res.status !== "success") {
+          console.log("User not logged in, staying on current page");
+        }
       } catch (error) {
-        navigate("/login");
+        console.error("Error fetching user:", error);
       } finally {
         setIsLoading(false);
       }
-    }, 0);
-
+    });
+  
     return () => clearTimeout(delay);
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+  
 
   return (
     <AuthContext.Provider

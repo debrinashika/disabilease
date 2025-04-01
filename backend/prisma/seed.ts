@@ -67,7 +67,7 @@ const main = async () => {
 
     // User (Admin)
     const admin = {
-      email: 'admin@dailee.com',
+      email: 'admin@disabilease.com',
       username: 'admin',
       password: 'admin',
     }

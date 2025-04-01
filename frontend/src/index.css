@@ -177,7 +177,7 @@ input[type="range"] {
   --range-progress: 0;
   -webkit-appearance: none;
   position: relative;
-  background: #FFF9E7;
+  background: #EDE4FF;
   width: 100%;
   height: 4px;
   border-radius: 5px;
@@ -186,7 +186,7 @@ input[type="range"] {
 /* Input range - firefox */
 input[type="range"]::-moz-range-track {
   position: relative;
-  background: #FFF9E7;
+  background: #EDE4FF;
   width: 100%;
   height: 4px;
   border-radius: 5px;
@@ -196,7 +196,7 @@ input[type="range"]::-moz-range-track {
 input[type="range"]::before {
   content: '';
   height: 4px;
-  background: #EFAA56;
+  background: #6A6DB0;
   width: var(--range-progress);
   border-radius: 5px;
   position: absolute;
@@ -207,7 +207,7 @@ input[type="range"]::before {
 
 /* played progress length - firefox */
 input[type="range"]::-moz-range-progress {
-  background: #EFAA56;
+  background: #6A6DB0;
   border-radius: 5px;
   height: 4px;
 }

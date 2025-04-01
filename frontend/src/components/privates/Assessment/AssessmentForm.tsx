@@ -65,7 +65,7 @@ export const AssessmentForm = () => {
       return { ...prevForm, tests: updatedTests };
     });
 
-    setPage(page + 1);
+    setPage(page+1);
   };
 
   const { self } = useAuth();
@@ -166,8 +166,8 @@ export const AssessmentForm = () => {
   const { user } = useAuth();
 
   return (
-    <div className="h-screen pt-8 pb-10 flex flex-col">
-      <div className="flex flex-col items-center relative w-full px-6">
+    <div className="h-screen flex flex-col pt-8 pb-12">
+      <div className="flex flex-col items-center relative w-full mt-2">
         <input type="range" ref={progressBarRef} />
       </div>
 
@@ -183,37 +183,36 @@ export const AssessmentForm = () => {
               }
             }}
           >
-            <CaretLeft strokeClassName="stroke-brown-03" />
-            <p className="text-brown-03 font-medium">
-              Back {page === 1 && user?.already_test ? "Home" : ""}
-            </p>
+
           </BaseButton>
         </div>
       )}
 
+    <img
+        src="/images/quiz-1.svg" // Gantilah dengan path gambar yang sesuai
+        alt="Star Character"
+        className="w-full mt-[-50px] mb-[-20px]"
+      />
+
       <div
-        className={`flex flex-col flex-grow transition-all ease-in-out duration-500 pt-[10%]
+        className={`flex flex-col flex-grow transition-all ease-in-out duration-500 
           ${questions.length == 0 ? "translate-x-full" : "translate-x-0"}
       `}
       >
-        {questions.length > 0 && page <= totalData && (
-          <div className="px-6">
-            <h1
-              className={`font-semibold text-2xl text-brown-03 ${
-                page === 1 && !user?.already_test ? "pt-[78px]" : "pt-8"
-              }`}
-            >
+        {questions.length > 0 && page <= totalData+1 && (
+          <div className="flex flex-col justify-center items-center px-12">
+            <h1 className="text-indigo-950 text-xl font-normal text-center">
               {questions[page - 1].question}
             </h1>
 
-            <div className="h-[5vh]" />
+            <div className="h-[1.5vh]" />
             <div className="flex flex-col gap-4">
               {questions[page - 1].answers.map((answer) => (
                 <div key={answer.answer_id}>
                   <PrimaryButton
                     text={answer.answer}
                     type="default"
-                    className="w-full bg-white-01 text-base text-neutral-550 font-normal rounded-xl border border-orange-02 py-2.5 text-left"
+                    className="w-full bg-white-01 text-base text-neutral-550 font-normal rounded-xl border border-purple-02"
                     onClick={() =>
                       handleNext(
                         questions[page - 1].question_id,
@@ -227,36 +226,10 @@ export const AssessmentForm = () => {
           </div>
         )}
 
-        {page > totalData && (
+        {page== totalData+1 && (
           <>
-            <DndContext
-              collisionDetection={closestCorners}
-              onDragEnd={handleDragEnd}
-              sensors={sensors}
-            >
-              <div className="px-6 flex-grow">
-                <h1 className="font-semibold text-2xl text-brown-03 pt-[10%]">
-                  Arrange your task categories from most to least liked
-                </h1>
-                <div className="flex flex-col gap-4 pt-[15%]">
-                  <div className="flex flex-col gap-4 w-full">
-                    <SortableContext
-                      items={sortableItems}
-                      strategy={verticalListSortingStrategy}
-                    >
-                      {taskCategories.map((category) => (
-                        <DndCard
-                          key={category.task_category_id}
-                          taskCategory={category}
-                          buttonClassName="border-orange-02 py-2.5"
-                          iconClassName="fill-orange-02"
-                        />
-                      ))}
-                    </SortableContext>
-                  </div>
-                </div>
-              </div>
-            </DndContext>
+          
+           
             <div className="px-6 mt-3">
               <PrimaryButton
                 text="Finish"

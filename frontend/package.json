@@ -1,5 +1,5 @@
 {
-  "name": "dailee-fe",
+  "name": "disabilease-fe",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -15,8 +15,8 @@
     "@dnd-kit/utilities": "^3.2.2",
     "antd": "^5.17.0",
     "axios": "^1.6.8",
-    "dailee-fe": "file:",
     "dayjs": "^1.11.11",
+    "disabilease-fe": "file:",
     "jsonwebtoken": "^9.0.2",
     "jwt-decode": "^4.0.0",
     "react": "^18.2.0",

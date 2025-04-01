@@ -61,8 +61,8 @@ export default {
       },
       backgroundImage: {
         assessment: "url('/icons/bg-assessment.svg')",
-        "artikel-1": "url('/icons/bg-artikel-1.svg')",
-        "artikel-2": "url('/icons/bg-artikel-2.svg')",
+        "landing-1": "url('/icons/bg-landing-1.svg')",
+        "landing-2": "url('/icons/bg-landing-2.svg')",
         "artikel-3": "url('/icons/bg-artikel-3.svg')",
         "students-module":
           "url('/icons/bg-students-module.svg'), linear-gradient(to bottom, rgba(246, 237, 207, 0.5), rgba(243, 220, 152, 0.75))",

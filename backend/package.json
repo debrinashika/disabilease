@@ -1,5 +1,5 @@
 {
-  "name": "dailee-be",
+  "name": "disabilease-be",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -25,7 +25,7 @@
     "body-parser": "^1.20.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "dailee-be": "file:",
+    "disabilease-be": "file:",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
