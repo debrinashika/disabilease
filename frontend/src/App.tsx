@@ -7,6 +7,8 @@ import { Profile } from '@pages/Profile';
 import { Landing } from '@pages/Landing';
 import { OnboardingPage } from '@pages/OnboardingPage';
 import { Assessment } from '@pages/Assessment';
+import { AssessmentResult } from '@pages/AssessmentResult';
+import { Recommendations } from '@pages/Recommendations';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
 
@@ -35,6 +37,8 @@ function App() {
       <Route path="/onboarding" element={<UnprotectedRoute element={<OnboardingPage />} />} />
       <Route path="/assessment" element={<ProtectedRoute isAssessment={true} element={<Assessment />} />} />
       <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
+      <Route path="/result" element={<ProtectedRoute element={<AssessmentResult />} />} />
+      <Route path="/recommendations" element={<ProtectedRoute element={<Recommendations />} />} />
     </Routes>
   );
 }
