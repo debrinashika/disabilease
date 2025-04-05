@@ -14,13 +14,13 @@ type PingPropType = {
 export const Ping = ({ text }: PingPropType) => {
     return (
         <div className="flex flex-row">
-            <div className="ml-4">
+            <div className="ml-2">
                 <Ava/>
             </div>
             <div className="ml-4 flex flex-col">
-                <div className="flex flex-row mt-2">
+                <div className="flex flex-row mt-1">
                     {/* username */}
-                    <p>aku user</p>
+                    <p className="text-[#F19877] font-semibold">aku user</p>
                     <div className="mt-1 ml-4" style={{ transform: 'scale(0.5)' }}>
                         <OneDot/>
                     </div>

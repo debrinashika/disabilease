@@ -9,6 +9,11 @@ import { OnboardingPage } from '@pages/OnboardingPage';
 import { Assessment } from '@pages/Assessment';
 import { AssessmentResult } from '@pages/AssessmentResult';
 import { Recommendations } from '@pages/Recommendations';
+import { Planner } from '@pages/Planner';
+import { Social } from '@pages/Social';
+import { Module } from '@pages/Module';
+import { ModulDetail } from '@pages/ModuleDetail';
+import { SubTopikPage } from '@pages/SubTopik';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
 
@@ -39,6 +44,11 @@ function App() {
       <Route path="/profile" element={<ProtectedRoute element={<Profile />} />} />
       <Route path="/result" element={<ProtectedRoute element={<AssessmentResult />} />} />
       <Route path="/recommendations" element={<ProtectedRoute element={<Recommendations />} />} />
+      <Route path="/planner" element={<ProtectedRoute element={<Planner />} />} />
+      <Route path="/social" element={<ProtectedRoute element={<Social />} />} />
+      <Route path="/module" element={<ProtectedRoute element={<Module />} />} />
+      <Route path="/module/:id" element={<ProtectedRoute element={<ModulDetail />} />} />
+      <Route path="/topic/:id" element={<ProtectedRoute element={<SubTopikPage />} />} />
     </Routes>
   );
 }

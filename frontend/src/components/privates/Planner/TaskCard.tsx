@@ -36,13 +36,13 @@ export const TaskCard = ({
   return (
     <>
       {is_recommendation && (
-        <div className="w-full flex flex-row rounded-2xl border gap-3 py-2.5 px-4 border-orange-02 bg-yellow-02 bg-opacity-40">
+        <div className="w-full flex flex-row rounded-2xl border gap-3 py-2.5 px-4 bg-white bg-opacity-40">
           <div className="flex flex-col gap-2 w-full">
-            <p className="text-sm font-semibold text-orange-01">{name}</p>
+            <p className="text-sm font-semibold text-black">{name}</p>
             <div className="flex flex-col gap-1 text-xs text-neutral-500">
               <div className="flex flex-row gap-2 items-center">
-                <Clock strokeClassName="stroke-neutral-500" />
-                <p>{duration}</p>
+                <Clock strokeClassName="stroke-purple-01" />
+                <p className="text-purple-01">{duration}</p>
               </div>
             </div>
           </div>
@@ -91,12 +91,12 @@ export const TaskCard = ({
 
             <div
               className={`w-fit px-2 py-0.5 rounded-full ${
-                statusLocal == 0 ? "bg-yellow-04" : "bg-neutral-200"
+                statusLocal == 0 ? "bg-purple-03" : "bg-neutral-200"
               }`}
             >
               <p
                 className={`text-[10px] font-medium ${
-                  statusLocal == 0 ? "text-orange-01" : "text-neutral-500"
+                  statusLocal == 0 ? "text-purple-01" : "text-neutral-500"
                 }`}
               >
                 {category}

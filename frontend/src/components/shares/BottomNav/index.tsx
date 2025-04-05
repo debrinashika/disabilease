@@ -5,7 +5,7 @@ import { Profile } from "@assets/icons/Profile";
 import { Link } from "react-router-dom";
 
 type BottomNavPropType = {
-  screen: "home" | "planner"| "profile";
+  screen: "home" | "planner"| "social";
 };
 
 export const BottomNav = ({ screen }: BottomNavPropType) => {
@@ -25,10 +25,10 @@ export const BottomNav = ({ screen }: BottomNavPropType) => {
             dotClassName={screen === "planner" ? "stroke-white-01" : "stroke-purple-02"}
           />
         </Link>
-        <Link to={"/profile"} className="flex justify-center items-center">
+        <Link to={"/social"} className="flex justify-center items-center">
           <Profile
-            fillClassName={screen === "profile" ? "fill-purple-01" : "fill-white-01"}
-            strokeClassName={screen === "profile" ? "stroke-white-01" : "stroke-purple-02"}
+            fillClassName={screen === "social" ? "fill-purple-01" : "fill-white-01"}
+            strokeClassName={screen === "social" ? "stroke-white-01" : "stroke-purple-02"}
           />
         </Link>
       </div>
