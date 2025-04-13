@@ -1,0 +1,25 @@
+export const TerapiWicara = () => {
+  return (
+    <svg width="45" height="48" viewBox="0 0 45 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect y="0.794" width="44.420" height="46.569" rx="14.132" fill="#CAC9F8" />
+      <ellipse cx="15.364" cy="19.244" rx="2.999" ry="3.998" fill="white" />
+      <ellipse cx="15.457" cy="19.662" rx="2.208" ry="2.650" fill="#545454" />
+      <ellipse cx="30.024" cy="19.244" rx="2.999" ry="3.998" fill="white" />
+      <ellipse cx="30.118" cy="19.662" rx="2.208" ry="2.650" fill="#545454" />
+      <path
+        d="M31.084 28.495C26.055 29.378 22.680 30.261 14.132 28.495C12.807 28.053 13.828 31.282 16.340 33.794C18.852 36.306 25.932 37.009 29.147 33.794C31.355 31.586 33.121 28.495 31.084 28.495Z"
+        fill="#545454"
+        stroke="#545454"
+        strokeWidth="2.666"
+        strokeLinecap="round"
+      />
+      <path
+        d="M34 14C36.2091 14 38 12.2091 38 10C38 7.79086 36.2091 6 34 6"
+        stroke="#545454"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path d="M34 10C36.2091 10 38 8.20914 38 6" stroke="#545454" strokeWidth="1.5" strokeLinecap="round" />
+    </svg>
+  )
+}

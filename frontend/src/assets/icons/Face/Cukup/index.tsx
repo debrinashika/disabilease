@@ -1,0 +1,1 @@
+export { Cukup } from "./Cukup";

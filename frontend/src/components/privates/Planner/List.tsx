@@ -9,6 +9,7 @@ import { IApiBaseTask } from "@interfaces/task";
 import { libs } from "@libs";
 import { TaskCard } from "./TaskCard";
 import { History } from "@assets/icons/History";
+import { ViewToggle } from "../DayliInput/ViewToggle"
 
 const initialTaskForm: IApiBaseTask = {
   task_id: -1,
@@ -23,11 +24,9 @@ export const List = () => {
   // const { user } = useAuth();
   const apiBaseError = apiBase().error<IApiBaseError>();
 
-  // Modal
   const [modalOpen, setModalOpen] = useState<boolean>(false);
 
  
-  // Task
   const [modalAddTaskOpen, setModalAddTaskOpen] = useState<boolean>(false);
   const [taskForm, setTaskForm] = useState<IApiBaseTask>(initialTaskForm);
 
@@ -63,7 +62,6 @@ export const List = () => {
       const res = await apiBase().task().getCompletedTask();
 
       if (res.status === "success") {
-        // Set tasks data
         setTasks(res.data);
 
         apiBaseError.clear();
@@ -83,7 +81,6 @@ export const List = () => {
         if (res.status === "success") {
           toast.success(res.message);
 
-          // Wait for 1000 ms
           await new Promise((resolve) => setTimeout(resolve, 1000));
 
           if (isHistory) {
@@ -145,7 +142,6 @@ export const List = () => {
     setIsHistory(false);
   };
 
-  // Date
   const today = new Date();
   const [selectedDate, setSelectedDate] = useState<Date>(today);
 
@@ -155,18 +151,16 @@ export const List = () => {
     return date;
   });
 
-  // Animation
   const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoading(false);
-    }, 10); // Trick for trigger
+    }, 10); 
 
     return () => clearTimeout(timeout);
   }, []);
 
-  // Task categories
   const [taskCategories, setTaskCategories] = useState<IApiBaseTaskCategory[]>(
     []
   );
@@ -175,7 +169,6 @@ export const List = () => {
       const res = await apiBase().taskCategory().getTaskCategories();
 
       if (res.status === "success") {
-        // Set task categories data
         setTaskCategories(res.data);
       }
     } catch (error) {
@@ -230,10 +223,8 @@ export const List = () => {
         </div>
 
         <div className="absolute bottom-0 w-full h-[82vh] z-10 bg-purple-03 rounded-t-2xl px-7 py-5 overflow-y-auto">
-          <div className="flex flex-col gap-4 pb-16">
-            <div className="pb-2">
-              <p className="text-md font-bold text-purple-01">{isHistory ? "Completed Activity" : "Activity"}</p>
-            </div>
+          <div className="flex flex-col gap-4 pb-16">     
+            <ViewToggle />
             {tasks &&
               tasks.map((task, index) => (
                 <div key={`${task.task_name}-${index}`}>

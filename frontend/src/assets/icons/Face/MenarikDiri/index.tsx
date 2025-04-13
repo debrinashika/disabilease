@@ -1,0 +1,1 @@
+export { MenarikDiri } from "./MenarikDiri";

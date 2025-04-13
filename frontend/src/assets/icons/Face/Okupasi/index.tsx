@@ -1,0 +1,1 @@
+export { TerapiOkupasi } from "./Okupasi";

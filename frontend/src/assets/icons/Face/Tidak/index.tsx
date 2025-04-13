@@ -1,0 +1,1 @@
+export { Tidak } from "./Tidak.";

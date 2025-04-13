@@ -1,0 +1,1 @@
+export { MimpiBuruk } from "./MimpiBuruk";

@@ -16,6 +16,7 @@ import { ModulDetail } from '@pages/ModuleDetail';
 import { SubTopikPage } from '@pages/SubTopik';
 
 import { Navigate, Route, Routes } from 'react-router-dom';
+import DailyInputPage from '@pages/DailyInput';
 
 function App() {
   const { user } = useAuth();
@@ -45,6 +46,7 @@ function App() {
       <Route path="/result" element={<ProtectedRoute element={<AssessmentResult />} />} />
       <Route path="/recommendations" element={<ProtectedRoute element={<Recommendations />} />} />
       <Route path="/planner" element={<ProtectedRoute element={<Planner />} />} />
+      <Route path="/dailyinput" element={<ProtectedRoute element={<DailyInputPage />} />} />
       <Route path="/social" element={<ProtectedRoute element={<Social />} />} />
       <Route path="/module" element={<ProtectedRoute element={<Module />} />} />
       <Route path="/module/:id" element={<ProtectedRoute element={<ModulDetail />} />} />

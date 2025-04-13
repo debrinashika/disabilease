@@ -1,0 +1,1 @@
+export { Sedikit } from "./Sedikit";
