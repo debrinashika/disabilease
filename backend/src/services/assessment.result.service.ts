@@ -49,11 +49,7 @@ export class AssessmentResultService {
   }
 
   public async getUserGoalAnswer(user_id: number): Promise<AssessmentResult> {
-    // 0: depression
-    // 1: anxiety
-    // 2: burnout
-    // 3: stress
-    // 4: no goal
+  
     const assessmentResult = await this.assessmentResultModel.findFirst({
       where: {
         user_id: user_id,

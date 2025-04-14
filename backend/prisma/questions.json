@@ -1,90 +1,57 @@
 [
   {
     "category_id": 2,
-    "question": "How often have you felt a lack of interest or pleasure in doing things?"
+    "question": "Apakah anak Anda mampu merespon saat dipanggil namanya?"
   },
   {
     "category_id": 2,
-    "question": "How often have you been feeling a bit blue, down, or just plain hopeless?"
+    "question": "Apakah anak Anda menunjukkan ketertarikan bermain atau berinteraksi dengan orang lain?"
   },
   {
     "category_id": 2,
-    "question": "Have you had any trouble falling or staying asleep, or sleeping too much?"
-  },
-  {
-    "category_id": 2,
-    "question": "Have you been feeling tired or having little energy?"
-  },
-  {
-    "category_id": 2,
-    "question": "How's your appetite been lately?"
-  },
-
-  {
-    "category_id": 3,
-    "question": "How's your chill level been lately?"
+    "question": "Apakah anak Anda dapat menjaga kontak mata saat diajak berbicara?"
   },
   {
     "category_id": 3,
-    "question": "How's your worry meter been lately?"
+    "question": "Apakah anak Anda mengalami kesulitan dalam berbicara atau memahami ucapan?"
   },
   {
     "category_id": 3,
-    "question": "How often have you felt that you worry too much about different things?"
+    "question": "Apakah anak Anda mampu menyampaikan keinginannya dengan jelas?"
   },
   {
     "category_id": 3,
-    "question": "How's your ability to relax been lately?"
-  },
-  {
-    "category_id": 3,
-    "question": "Have you been feeling so restless that it is hard to sit still?"
+    "question": "Apakah anak Anda menggunakan bahasa tubuh atau isyarat saat tidak bisa mengungkapkan sesuatu dengan kata-kata?"
   },
 
   {
     "category_id": 4,
-    "question": "I feel like I could sleep ten hours a night and it still wouldn't feel like enough"
+    "question": "Apakah anak Anda sering terlihat cemas, mudah takut, atau sulit tenang tanpa alasan yang jelas?"
   },
   {
     "category_id": 4,
-    "question": "How do you feel about your compensation for the work you do?"
+    "question": "Apakah anak Anda sering menunjukkan perilaku berulang, seperti mengayunkan badan atau memutar benda secara terus-menerus?"
   },
   {
     "category_id": 4,
-    "question": "How's your creative spark been lately?"
-  },
-  {
-    "category_id": 4,
-    "question": "What about your day to day workload?"
-  },
-  {
-    "category_id": 4,
-    "question": "Would you say you have a great work/life balance?"
+    "question": "Apakah anak Anda mudah marah, frustasi, atau mengalami ledakan emosi berlebihan dibandingkan anak seusianya?"
   },
 
   {
     "category_id": 5,
-    "question": "How often have you been caught off guard lately?"
+    "question": "Bagaimana kemampuan anak Anda dalam mengurus dirinya sendiri, seperti makan, berpakaian, atau pergi ke kamar mandi?"
   },
   {
     "category_id": 5,
-    "question": "Ever felt like life's just spinning out of control?"
+    "question": "Apakah anak Anda tampak mudah lelah saat beraktivitas fisik ringan seperti berjalan atau bermain?"
   },
   {
     "category_id": 5,
-    "question": "How often have you felt like the universe is on your side lately?"
+    "question": "Apakah anak Anda mengalami keterlambatan dalam mulai berjalan, berbicara, atau melakukan aktivitas sehari-hari?"
   },
-  {
-    "category_id": 5,
-    "question": "How often have you felt like you're the master of keeping cool in frustrating situations?"
-  },
-  {
-    "category_id": 5,
-    "question": "How often have you felt like you're running the show lately?"
-  },
-
+  
   {
     "category_id": 1,
-    "question": "How are you feeling today?"
+    "question": "Hai apakah pernah melakukan assesment sebelumnya?"
   }
 ]

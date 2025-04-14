@@ -1,65 +1,65 @@
 [
   {
     "category_id": 2,
-    "rec_name": "Take a breather, do what brings you joy",
-    "rec_duration": 15
-  },
-  {
-    "category_id": 2,
-    "rec_name": "Recharge with a quick power nap!",
+    "rec_name": "Ikut serta dalam kegiatan komunitas atau kelompok sosial",
     "rec_duration": 30
   },
   {
     "category_id": 2,
-    "rec_name": "Enjoy some soothing music",
-    "rec_duration": 15
+    "rec_name": "Ajak teman baru berbicara dan bertukar cerita",
+    "rec_duration": 20
+  },
+  {
+    "category_id": 2,
+    "rec_name": "Latih kemampuan kerjasama dengan bermain game kelompok",
+    "rec_duration": 25
   },
 
   {
     "category_id": 3,
-    "rec_name": "Embark on a journey of self-meditation",
+    "rec_name": "Berlatih berbicara di depan cermin untuk meningkatkan kepercayaan diri",
     "rec_duration": 15
   },
   {
     "category_id": 3,
-    "rec_name": "Connect with your loved ones",
-    "rec_duration": 15
+    "rec_name": "Lakukan diskusi santai dengan keluarga atau teman",
+    "rec_duration": 20
   },
   {
     "category_id": 3,
-    "rec_name": "Unwind with a yoga session!",
+    "rec_name": "Buat rekaman suara menceritakan pengalaman harian",
     "rec_duration": 15
   },
 
   {
     "category_id": 4,
-    "rec_name": "Reflect on 3 things you're grateful for!",
+    "rec_name": "Tuliskan 3 hal positif yang kamu syukuri hari ini",
     "rec_duration": 10
   },
   {
     "category_id": 4,
-    "rec_name": "Embark on a podcast journey",
+    "rec_name": "Lakukan teknik mindfulness seperti meditasi atau pernapasan",
     "rec_duration": 15
   },
   {
     "category_id": 4,
-    "rec_name": "Move around, your body is your temple!",
-    "rec_duration": 15
+    "rec_name": "Tonton video motivasi yang membangkitkan semangat",
+    "rec_duration": 10
   },
 
   {
     "category_id": 5,
-    "rec_name": "Reach out and call your closest friends",
-    "rec_duration": 10
-  },
-  {
-    "category_id": 5,
-    "rec_name": "Relax with some deep breathing exercises",
+    "rec_name": "Lakukan peregangan ringan untuk melatih kelenturan tubuh",
     "rec_duration": 15
   },
   {
     "category_id": 5,
-    "rec_name": "Treat yourself to a well deserved reward!",
-    "rec_duration": 15
+    "rec_name": "Ikuti sesi senam sederhana di rumah",
+    "rec_duration": 20
+  },
+  {
+    "category_id": 5,
+    "rec_name": "Mainkan permainan fisik seperti bola atau lompat tali",
+    "rec_duration": 30
   }
 ]

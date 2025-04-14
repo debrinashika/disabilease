@@ -6,14 +6,15 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const data = [
-  { name: 'Sen', value: 30 },
-  { name: 'Sel', value: 50 },
-  { name: 'Rab', value: 40 },
-  { name: 'Kam', value: 70 },
-  { name: 'Jum', value: 60 },
-  { name: 'Sab', value: 80 },
-  { name: 'Min', value: 65 },
+  { name: 'Sen', normal: 50, current: 30 },
+  { name: 'Sel', normal: 52, current: 50 },
+  { name: 'Rab', normal: 54, current: 40 },
+  { name: 'Kam', normal: 55, current: 70 },
+  { name: 'Jum', normal: 53, current: 60 },
+  { name: 'Sab', normal: 56, current: 80 },
+  { name: 'Min', normal: 65, current: 65 },
 ];
+
 
 export const Home = () => {
   const { user } = useAuth();
@@ -149,33 +150,34 @@ export const Home = () => {
 
         {selectedTab === 'chart' && (
           <div>
-            <h3 className="text-lg font-semibold text-black-01 mb-2">Grafik Indeks Massa Tubuh</h3>
-            <div className="rounded-lg shadow-sm w-full h-56 overflow-x-auto">
-              <ResponsiveContainer width={700} height="100%">
-                <LineChart data={data} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
+            <h3 className="text-lg font-semibold text-black-01 mb-2 mt-5">Grafik Indeks Massa Tubuh</h3>
+            <div className="rounded-lg shadow-sm w-full h-44 overflow-x-auto">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Line type="monotone" dataKey="value" stroke="#8884d8" strokeWidth={2} dot={{ r: 4 }} />
+                  <Line type="monotone" dataKey="normal" stroke="#4CAF50" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="current" stroke="#8884d8" strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
-
-            <h3 className="text-lg font-semibold text-black-01 mb-2 mt-4">Grafik Mood</h3>
-            <div className="rounded-lg shadow-sm w-full h-56 overflow-x-auto">
-              <ResponsiveContainer width={700} height="100%">
-                <LineChart data={data} margin={{ top: 5, right: 20, left: 0, bottom: 5 }}>
+        
+            <h3 className="text-lg font-semibold text-black-01 mb-2 mt-10">Grafik Tumbuh Kembang</h3>
+            <div className="rounded-lg shadow-sm w-full h-44 overflow-x-auto">
+              <ResponsiveContainer width="100%" height="100%">
+                <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
                   <CartesianGrid strokeDasharray="3 3" />
                   <XAxis dataKey="name" />
                   <YAxis />
                   <Tooltip />
-                  <Line type="monotone" dataKey="value" stroke="#ED6E74" strokeWidth={2} dot={{ r: 4 }} />
+                  <Line type="monotone" dataKey="normal" stroke="#4CAF50" strokeWidth={2} dot={{ r: 3 }} />
+                  <Line type="monotone" dataKey="current" stroke="#ED6E74" strokeWidth={2} dot={{ r: 3 }} />
                 </LineChart>
               </ResponsiveContainer>
             </div>
           </div>
-          
         )}
       </div>
 

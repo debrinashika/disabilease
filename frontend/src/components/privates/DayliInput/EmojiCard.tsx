@@ -11,7 +11,7 @@ type EmojiCardProps = {
   multiSelect?: boolean
 }
 
-export const EmojiCard = ({ id, label, icon, isSelected, onClick, multiSelect = false }: EmojiCardProps) => {
+export const EmojiCard = ({ label, icon, isSelected, onClick }: EmojiCardProps) => {
   return (
     <button
       className={`flex flex-col items-center p-2 rounded-lg ${

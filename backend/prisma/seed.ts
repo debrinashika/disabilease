@@ -9,14 +9,16 @@ const prisma = new PrismaClient();
 const createCategorySeeds = () => {
   const categorySeeds = [
     { category_name: 'General' },
-    { category_name: 'Depression' },
-    { category_name: 'Anxiety' },
-    { category_name: 'Burnout' },
-    { category_name: 'Stress' }
+    { category_name: 'Social' },
+    { category_name: 'Communication' },
+    { category_name: 'Emotion' },
+    { category_name: 'Motoric' }
   ];
 
   return categorySeeds;
 }
+
+
 
 const createQuestionSeeds = () => {
   return questionSeeds;
@@ -30,16 +32,6 @@ const createRecommendationSeeds = () => {
   return recommendationSeeds;
 }
 
-const createTaskCategorySeeds = (user_id: number) => {
-  const taskCategorySeeds = [
-    { task_category_name: 'Document', user_id: user_id, priority: 1 },
-    { task_category_name: 'Creativity', user_id: user_id, priority: 2 },
-    { task_category_name: 'Extracurricular', user_id: user_id, priority: 3 },
-    { task_category_name: 'Math', user_id: user_id, priority: 4 },
-  ];
-
-  return taskCategorySeeds;
-}
 
 const main = async () => {
   console.log('Start seeding...');
@@ -60,10 +52,6 @@ const main = async () => {
       data: createAnswerSeeds()
     });
 
-    // Recommendation
-    await prisma.recommendation.createMany({
-      data: createRecommendationSeeds()
-    });
 
     // User (Admin)
     const admin = {
@@ -78,10 +66,6 @@ const main = async () => {
       data: admin
     });
 
-    // Task category
-    await prisma.taskCategory.createMany({
-      data: createTaskCategorySeeds(userAdmin.user_id)
-    });
   } catch (error) {
     console.error('Error while seeding data:', error);
   } finally {

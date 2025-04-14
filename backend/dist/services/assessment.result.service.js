@@ -47,11 +47,6 @@ class AssessmentResultService {
         return assessmentResult;
     }
     async getUserGoalAnswer(user_id) {
-        // 0: depression
-        // 1: anxiety
-        // 2: burnout
-        // 3: stress
-        // 4: no goal
         const assessmentResult = await this.assessmentResultModel.findFirst({
             where: {
                 user_id: user_id,

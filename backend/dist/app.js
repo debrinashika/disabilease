@@ -10,7 +10,6 @@ const cookie_parser_1 = tslib_1.__importDefault(require("cookie-parser"));
 class App {
     constructor() {
         this.app = (0, express_1.default)();
-        this.env = config_1.NODE_ENV;
         this.port = process.env.PORT || 3000;
         this.initializeMiddlewares();
         this.initializeRoutes();

@@ -1,6 +1,5 @@
 import { BottomNav } from "@components/shares/BottomNav";
 import { SocialCom } from "@components/privates/Social/SocialCom";
-import { TopicButtonList } from "@components/privates/Social/TopicList";
 import { TopNav } from "@components/shares/TopNav"
 import { useAuth } from "@contexts";
 

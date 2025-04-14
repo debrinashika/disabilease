@@ -11,49 +11,11 @@ import { TaskCard } from "./TaskCard";
 import { History } from "@assets/icons/History";
 import { ViewToggle } from "../DayliInput/ViewToggle"
 
-const initialTaskForm: IApiBaseTask = {
-  task_id: -1,
-  task_name: "",
-  deadline: "",
-  task_duration: 0,
-  status: 0,
-  task_category_id: -1
-}
+
 
 export const List = () => {
   // const { user } = useAuth();
   const apiBaseError = apiBase().error<IApiBaseError>();
-
-  const [modalOpen, setModalOpen] = useState<boolean>(false);
-
- 
-  const [modalAddTaskOpen, setModalAddTaskOpen] = useState<boolean>(false);
-  const [taskForm, setTaskForm] = useState<IApiBaseTask>(initialTaskForm);
-
-  const handleAddTask = async () => {
-    try {
-      const res = await apiBase().task().addOrUpdateTask(
-        taskForm
-      );
-
-      if (res.status === "success") {
-        setModalAddTaskOpen(false);
-        toast.success(res.message);
-        
-        await fetchTasks(selectedDate);
-
-        apiBaseError.clear();
-      }
-    } catch (error) {
-      apiBaseError.set(error);
-      toast.error(apiBaseError.getMessage() ?? "Error occured");
-    }
-  }
-
-  const handleEdit = (task: IApiBaseTask) => {
-    setModalAddTaskOpen(true);
-    setTaskForm(task);
-  }
 
   const [isHistory, setIsHistory] = useState<boolean>(false);
 
@@ -99,21 +61,7 @@ export const List = () => {
   }
 
   const customLib = libs();
-  const handleTaskFormDataChange = (
-    name: keyof IApiBaseTask,
-    value: string | number
-  ) => {
-    let parsedVal: string | number = value;
 
-    if (name === "task_duration" && typeof value == "string") {
-      parsedVal = customLib.timeStringToMinutes(value);
-    }
-
-    setTaskForm({
-      ...taskForm,
-      [name]: parsedVal,
-    });
-  };
 
   const [tasks, setTasks] = useState<any[]>([]);
   const fetchTasks = async (date: Date) => {
@@ -254,7 +202,7 @@ export const List = () => {
                     onClick={() => {
                       handleCheckTask(task);
                     }}
-                    onEdit={() => handleEdit(task)}
+                  
                   />
                 </div>
               ))}

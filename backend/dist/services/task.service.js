@@ -246,11 +246,6 @@ class TaskService {
         const assessmentResult = await assessmentResultService.getUserGoalAnswer(user_id);
         const points = assessmentResult.total_points;
         let category_id;
-        // 0: depression
-        // 1: anxiety
-        // 2: burnout
-        // 3: stress
-        // 4: no goal
         if (points == 0) {
             category_id = 2;
         }
