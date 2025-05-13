@@ -8,4 +8,6 @@ export declare class TaskController {
     getTask(req: RequestWithUser, res: Response): Promise<Response<any, Record<string, any>>>;
     checkTask(req: RequestWithUser, res: Response): Promise<Response<any, Record<string, any>>>;
     getCompletedTasks(req: RequestWithUser, res: Response): Promise<Response<any, Record<string, any>>>;
+    getUserCategory(req: RequestWithUser, res: Response): Promise<Response<any, Record<string, any>>>;
+    getAIRecommendation(req: RequestWithUser, res: Response): Promise<Response<any, Record<string, any>>>;
 }

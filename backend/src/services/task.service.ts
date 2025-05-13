@@ -4,6 +4,7 @@ import { AssessmentResultService } from './assessment.result.service';
 import { RecommendationService } from './recommendation.service';
 import { IApiBaseTask } from '../interfaces/task.interface';
 import { TaskUtils } from '../utils/task.utils';
+import { CategoryService } from './category.service';
 
 export class TaskService {
   private taskModel = new PrismaClient().task;
@@ -268,6 +269,7 @@ export class TaskService {
     const recommendationService = new RecommendationService();
 
     // 1. Rekomendasi 1: Worst mental health
+    console.log("ini results",userAssessmentResults)
     const userWorstMentalHealth = userAssessmentResults[0];
     const recommendationForUserWorstMentalHealth = await recommendationService.getRecommendationByCategoryId(userWorstMentalHealth.category_id);
 
@@ -336,4 +338,44 @@ export class TaskService {
       });
     }
   }
+
+  public async getUserCategory(user_id: number): Promise<any> {
+
+    const assessmentResultService = new AssessmentResultService();
+    
+
+    const userAssessmentResults = await assessmentResultService.getUserAssessmentResults(user_id);
+
+    // category service
+    const categoryService = new CategoryService();
+
+    const userWorstMentalHealth = userAssessmentResults[0];
+
+    const categoryDetails = await categoryService.getCategorybyId(userWorstMentalHealth.category_id);
+  
+    return categoryDetails
+
+  }
+
+  public async getAIRecommendations(user_id: number): Promise<any> {
+
+    const assessmentResultService = new AssessmentResultService();
+    
+
+    const userAssessmentResults = await assessmentResultService.getUserAssessmentResults(user_id);
+
+    // category service
+    const categoryService = new CategoryService();
+
+    const userWorstMentalHealth = userAssessmentResults[0];
+
+    const categoryDetails = await categoryService.getCategorybyId(userWorstMentalHealth.category_id);
+
+    const aiRecommendation = await assessmentResultService.getAiRecommendation(categoryDetails.category_name);
+    console.log("result", aiRecommendation);
+    
+    return aiRecommendation;
+
+  }
+
 }

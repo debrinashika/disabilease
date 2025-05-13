@@ -4,8 +4,8 @@ import { useAuth } from "@contexts";
 import { useNavigate } from "react-router-dom";
 
 const moduleList = [
-  { id: 1, title: "Motorik Kasar", image: "/images/tumbuh_kembang.png" },
-  { id: 2, title: "Bahasa & Komunikasi", image: "/images/tanya_dokter.png" },
+  { id: 1, title: "Autisme", image: "/images/tumbuh_kembang.png" },
+  { id: 2, title: "Down Syndrome", image: "/images/tanya_dokter.png" },
   { id: 3, title: "Kemandirian", image: "/images/tanya_dokter.png" },
   { id: 4, title: "Sosial Emosional", image: "/images/tumbuh_kembang.png" },
   { id: 5, title: "Kemandirian", image: "/images/tumbuh_kembang.png" },

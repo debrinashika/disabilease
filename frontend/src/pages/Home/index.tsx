@@ -1,20 +1,120 @@
 import { TopNav } from "@components/shares/TopNav";
 import { BottomNav } from "@components/shares/BottomNav";
 import { useAuth } from "@contexts";
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
-const data = [
-  { name: 'Sen', normal: 50, current: 30 },
-  { name: 'Sel', normal: 52, current: 50 },
-  { name: 'Rab', normal: 54, current: 40 },
-  { name: 'Kam', normal: 55, current: 70 },
-  { name: 'Jum', normal: 53, current: 60 },
-  { name: 'Sab', normal: 56, current: 80 },
-  { name: 'Min', normal: 65, current: 65 },
+// Enhanced developmental milestones data
+const developmentData = [
+  { 
+    age: '0-6m', 
+    motor: 18, 
+    language: 12, 
+    cognitive: 15, 
+    social: 10, 
+    emotional: 8,
+    adaptive: 9,
+    sensory: 7
+  },
+  { 
+    age: '6-12m', 
+    motor: 35, 
+    language: 28, 
+    cognitive: 32, 
+    social: 25, 
+    emotional: 20,
+    adaptive: 22,
+    sensory: 18
+  },
+  { 
+    age: '1-1.5y', 
+    motor: 45, 
+    language: 38, 
+    cognitive: 42, 
+    social: 35, 
+    emotional: 30,
+    adaptive: 32,
+    sensory: 28
+  },
+  { 
+    age: '1.5-2y', 
+    motor: 55, 
+    language: 48, 
+    cognitive: 52, 
+    social: 45, 
+    emotional: 40,
+    adaptive: 42,
+    sensory: 38
+  },
+  { 
+    age: '2-2.5y', 
+    motor: 65, 
+    language: 58, 
+    cognitive: 62, 
+    social: 55, 
+    emotional: 50,
+    adaptive: 52,
+    sensory: 48
+  },
+  { 
+    age: '2.5-3y', 
+    motor: 75, 
+    language: 68, 
+    cognitive: 72, 
+    social: 65, 
+    emotional: 60,
+    adaptive: 62,
+    sensory: 58
+  },
+  { 
+    age: '3-4y', 
+    motor: 82, 
+    language: 75, 
+    cognitive: 78, 
+    social: 72, 
+    emotional: 68,
+    adaptive: 70,
+    sensory: 65
+  },
+  { 
+    age: '4-5y', 
+    motor: 90, 
+    language: 83, 
+    cognitive: 87, 
+    social: 80, 
+    emotional: 75,
+    adaptive: 78,
+    sensory: 72
+  },
+  { 
+    age: '5-6y', 
+    motor: 96, 
+    language: 90, 
+    cognitive: 93, 
+    social: 88, 
+    emotional: 82,
+    adaptive: 85,
+    sensory: 80
+  }
 ];
 
+// Custom tooltip component
+const CustomTooltip = ({ active, payload, label }: any) => {
+  if (active && payload && payload.length) {
+    return (
+      <div className="bg-white p-4 border border-gray-200 rounded-lg shadow-md">
+        <p className="font-bold text-gray-800">{label}</p>
+        {payload.map((entry: any, index: number) => (
+          <p key={`item-${index}`} style={{ color: entry.color }}>
+            {entry.name}: {entry.value}%
+          </p>
+        ))}
+      </div>
+    );
+  }
+  return null;
+};
 
 export const Home = () => {
   const { user } = useAuth();
@@ -39,7 +139,7 @@ export const Home = () => {
             className={`px-4 py-2 rounded-full text-sm font-semibold ${selectedTab === 'chart' ? 'bg-purple-01 text-white' : 'bg-white text-purple-01 border border-purple-01'}`}
             onClick={() => setSelectedTab('chart')}
           >
-            Grafik
+            Grafik Perkembangan
           </button>
         </div>
 
@@ -149,33 +249,121 @@ export const Home = () => {
         )}
 
         {selectedTab === 'chart' && (
-          <div>
-            <h3 className="text-lg font-semibold text-black-01 mb-2 mt-5">Grafik Indeks Massa Tubuh</h3>
-            <div className="rounded-lg shadow-sm w-full h-44 overflow-x-auto">
+          <div className="bg-white rounded-xl p-4 shadow-md">
+            <h3 className="text-lg font-semibold text-gray-800 mb-4">Grafik Perkembangan Anak</h3>
+            
+            <div className="w-full h-[400px]">
               <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line type="monotone" dataKey="normal" stroke="#4CAF50" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="current" stroke="#8884d8" strokeWidth={2} dot={{ r: 3 }} />
+                <LineChart
+                  data={developmentData}
+                  margin={{ top: 20, right: 30, left: 20, bottom: 60 }}
+                >
+                  <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#f0f0f0" />
+                  <XAxis 
+                    dataKey="age" 
+                    tick={{ fill: '#6b7280', fontSize: 12 }}  // Adjust font size here
+                    label={{ 
+                      value: 'Usia Anak', 
+                      position: 'bottom', 
+                      offset: 30,
+                      fill: '#6b7280',
+                      fontSize: 12  // Adjust font size here
+                    }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <YAxis 
+                    domain={[0, 100]}
+                    tick={{ fill: '#6b7280', fontSize: 12 }}  // Adjust font size here
+                    label={{ 
+                      value: 'Persentase Pencapaian', 
+                      angle: -90, 
+                      position: 'insideLeft',
+                      fill: '#6b7280',
+                      fontSize: 12,  
+                      dy:50
+                    }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <Tooltip content={<CustomTooltip />} />
+                  <Legend 
+                    layout="horizontal" 
+                    verticalAlign="top" 
+                    align="center"
+                    wrapperStyle={{ paddingLeft: 0, paddingBottom: 20 }}
+                    iconSize={10}
+                    formatter={(value) => (
+                      <span style={{ fontSize: '12px', color: '#6b7280' }}>
+                        {value}
+                      </span>
+                    )}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="motor" 
+                    name="Motorik Kasar & Halus" 
+                    stroke="#4CAF50" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="language" 
+                    name="Bahasa & Komunikasi" 
+                    stroke="#2196F3" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="cognitive" 
+                    name="Kognitif" 
+                    stroke="#9C27B0" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="social" 
+                    name="Sosial" 
+                    stroke="#FF9800" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="emotional" 
+                    name="Emosional" 
+                    stroke="#F44336" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
+                  <Line 
+                    type="monotone" 
+                    dataKey="adaptive" 
+                    name="Adaptif" 
+                    stroke="#607D8B" 
+                    strokeWidth={3} 
+                    dot={{ r: 4 }}
+                    activeDot={{ r: 6 }}
+                  />
                 </LineChart>
               </ResponsiveContainer>
             </div>
-        
-            <h3 className="text-lg font-semibold text-black-01 mb-2 mt-10">Grafik Tumbuh Kembang</h3>
-            <div className="rounded-lg shadow-sm w-full h-44 overflow-x-auto">
-              <ResponsiveContainer width="100%" height="100%">
-                <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 5 }}>
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <XAxis dataKey="name" />
-                  <YAxis />
-                  <Tooltip />
-                  <Line type="monotone" dataKey="normal" stroke="#4CAF50" strokeWidth={2} dot={{ r: 3 }} />
-                  <Line type="monotone" dataKey="current" stroke="#ED6E74" strokeWidth={2} dot={{ r: 3 }} />
-                </LineChart>
-              </ResponsiveContainer>
+
+            <div className="text-sm text-gray-600">
+              <p className="font-medium">Keterangan:</p>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Grafik menunjukkan pencapaian milestone perkembangan anak berdasarkan usia</li>
+                <li>Setiap garis mewakili aspek perkembangan yang berbeda</li>
+                <li>Nilai 100% menunjukkan pencapaian maksimal untuk kelompok usia tersebut</li>
+              </ul>
             </div>
           </div>
         )}

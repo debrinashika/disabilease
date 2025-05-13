@@ -5,4 +5,5 @@ export declare class AssessmentResultService {
     createOrUpdateAssessmentResult(user_id: number, category_id: number, points: number): Promise<void>;
     getUserAssessmentResults(user_id: number): Promise<AssessmentResult[]>;
     getUserGoalAnswer(user_id: number): Promise<AssessmentResult>;
+    getAiRecommendation(category: string): Promise<string>;
 }

@@ -6,6 +6,7 @@ const task_category_service_1 = require("./task.category.service");
 const assessment_result_service_1 = require("./assessment.result.service");
 const recommendation_service_1 = require("./recommendation.service");
 const task_utils_1 = require("../utils/task.utils");
+const category_service_1 = require("./category.service");
 class TaskService {
     constructor() {
         this.taskModel = new client_1.PrismaClient().task;
@@ -227,6 +228,7 @@ class TaskService {
         // Recommendations
         const recommendationService = new recommendation_service_1.RecommendationService();
         // 1. Rekomendasi 1: Worst mental health
+        console.log("ini results", userAssessmentResults);
         const userWorstMentalHealth = userAssessmentResults[0];
         const recommendationForUserWorstMentalHealth = await recommendationService.getRecommendationByCategoryId(userWorstMentalHealth.category_id);
         // Find longest task duration from resultList
@@ -284,6 +286,28 @@ class TaskService {
                 }
             });
         }
+    }
+    async getUserCategory(user_id) {
+        const assessmentResultService = new assessment_result_service_1.AssessmentResultService();
+        const userAssessmentResults = await assessmentResultService.getUserAssessmentResults(user_id);
+        // category service
+        const categoryService = new category_service_1.CategoryService();
+        const userWorstMentalHealth = userAssessmentResults[0];
+        const categoryDetails = await categoryService.getCategorybyId(userWorstMentalHealth.category_id);
+       
+        return categoryDetails;
+    }
+    async getAIRecommendations(user_id) {
+        const assessmentResultService = new assessment_result_service_1.AssessmentResultService();
+        const userAssessmentResults = await assessmentResultService.getUserAssessmentResults(user_id);
+        // category service
+        const categoryService = new category_service_1.CategoryService();
+        const userWorstMentalHealth = userAssessmentResults[0];
+        const categoryDetails = await categoryService.getCategorybyId(userWorstMentalHealth.category_id);
+        console.log("ini punya AI Category Details: ", categoryDetails);
+        const aiRecommendation = await assessmentResultService.getAiRecommendation(categoryDetails.category_name);
+        console.log("result", aiRecommendation);
+        return aiRecommendation;
     }
 }
 exports.TaskService = TaskService;

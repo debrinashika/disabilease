@@ -9,4 +9,6 @@ export declare class TaskService {
     private getUnder10Hours;
     private getRecommendations;
     checkTask(user_id: number, task_id: number): Promise<void>;
+    getUserCategory(user_id: number): Promise<any>;
+    getAIRecommendations(user_id: number): Promise<any>;
 }

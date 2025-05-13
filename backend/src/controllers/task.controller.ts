@@ -11,6 +11,8 @@ export class TaskController {
     this.getTask = this.getTask.bind(this);
     this.checkTask = this.checkTask.bind(this);
     this.getCompletedTasks = this.getCompletedTasks.bind(this);
+    this.getUserCategory = this.getUserCategory.bind(this);
+    this.getAIRecommendation = this.getAIRecommendation.bind(this);
   }
 
   public async addOrUpdateTask(req: RequestWithUser, res: Response) {
@@ -62,6 +64,32 @@ export class TaskController {
 
   public async getCompletedTasks(req: RequestWithUser, res: Response) {
     const completedTasks = await this.taskService.getCompletedTask(
+      req.user.user_id
+    );
+
+    return ResponseHelper.responseSuccess(
+      res, 
+      HttpStatusCode.Ok, 
+      'Operation successful', 
+      completedTasks
+    );
+  }
+
+  public async getUserCategory(req: RequestWithUser, res: Response) {
+    const completedTasks = await this.taskService.getUserCategory(
+      req.user.user_id
+    );
+
+    return ResponseHelper.responseSuccess(
+      res, 
+      HttpStatusCode.Ok, 
+      'Operation successful', 
+      completedTasks
+    );
+  }
+
+  public async getAIRecommendation(req: RequestWithUser, res: Response) {
+    const completedTasks = await this.taskService.getAIRecommendations(
       req.user.user_id
     );
 

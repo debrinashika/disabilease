@@ -21,4 +21,19 @@ export class CategoryService {
 
     return category;
   }
+
+   public async getCategorybyId(category_id: number) {
+    const category = await this.categoryModel.findFirst({
+      where: {
+        category_id:category_id
+      },
+      select: {
+        category_name: true
+      }
+    });
+
+    return category;
+  }
+
+ 
 }

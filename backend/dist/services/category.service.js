@@ -23,6 +23,17 @@ class CategoryService {
         });
         return category;
     }
+    async getCategorybyId(category_id) {
+        const category = await this.categoryModel.findFirst({
+            where: {
+                category_id: category_id
+            },
+            select: {
+                category_name: true
+            }
+        });
+        return category;
+    }
 }
 exports.CategoryService = CategoryService;
 //# sourceMappingURL=category.service.js.map

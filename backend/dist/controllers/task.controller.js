@@ -10,6 +10,8 @@ class TaskController {
         this.getTask = this.getTask.bind(this);
         this.checkTask = this.checkTask.bind(this);
         this.getCompletedTasks = this.getCompletedTasks.bind(this);
+        this.getUserCategory = this.getUserCategory.bind(this);
+        this.getAIRecommendation = this.getAIRecommendation.bind(this);
     }
     async addOrUpdateTask(req, res) {
         const taskData = req.body;
@@ -28,6 +30,14 @@ class TaskController {
     }
     async getCompletedTasks(req, res) {
         const completedTasks = await this.taskService.getCompletedTask(req.user.user_id);
+        return helpers_1.ResponseHelper.responseSuccess(res, http_enum_1.HttpStatusCode.Ok, 'Operation successful', completedTasks);
+    }
+    async getUserCategory(req, res) {
+        const completedTasks = await this.taskService.getUserCategory(req.user.user_id);
+        return helpers_1.ResponseHelper.responseSuccess(res, http_enum_1.HttpStatusCode.Ok, 'Operation successful', completedTasks);
+    }
+    async getAIRecommendation(req, res) {
+        const completedTasks = await this.taskService.getAIRecommendations(req.user.user_id);
         return helpers_1.ResponseHelper.responseSuccess(res, http_enum_1.HttpStatusCode.Ok, 'Operation successful', completedTasks);
     }
 }

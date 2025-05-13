@@ -29,6 +29,18 @@ export class TaskRoute implements Routes {
     );
 
     this.router.get(
+      '/category', 
+      AuthMiddleware.authenticateToken, 
+      ValidationMiddleware.exceptionGuard(this.taskController.getUserCategory)
+    );
+
+    this.router.get(
+      '/ai-recommendation', 
+      AuthMiddleware.authenticateToken, 
+      ValidationMiddleware.exceptionGuard(this.taskController.getAIRecommendation)
+    );
+
+    this.router.get(
       '/task/:date', 
       AuthMiddleware.authenticateToken, 
       ValidationMiddleware.validate(getTaskSchema),

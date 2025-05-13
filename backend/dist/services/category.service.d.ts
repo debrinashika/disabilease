@@ -4,4 +4,7 @@ export declare class CategoryService {
         category_id: number;
         category_name: string;
     }[]>;
+    getCategorybyId(category_id: number): Promise<{
+        category_name: string;
+    }>;
 }

@@ -36,6 +36,8 @@ export const support = () => {
       self: "tasks",
       getTask: "tasks/task",
       getCompletedTask: "tasks/completed",
+      getUserCategory: "tasks/category",
+      getAIRecommendation: "tasks/ai-recommendation"
     },
   };
 

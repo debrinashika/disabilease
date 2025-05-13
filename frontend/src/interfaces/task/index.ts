@@ -6,3 +6,7 @@ export interface IApiBaseTask {
   status: number
   task_category_id: number
 }
+
+export interface UserCategoryResponse {
+  category_name: string; // Ganti sesuai dengan struktur data yang sebenarnya
+}
